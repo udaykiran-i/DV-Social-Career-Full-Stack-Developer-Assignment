@@ -1,20 +1,19 @@
 import React from "react";
 import Login from "./components/Login/login";
-import Design from "./components/Design-1/design";
-import Design2 from "./components/Design-2/design2";
-import Design3 from "./components/Design-3/design3";
+import { Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu/menu";
+import Cards from "./components/Cards/cards";
 import SpecialMenu from "./components/SpecialMenu/specialMenu";
 
 function App() {
   return (
     <div>
+      <Routes>
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/cards" element={<Cards />} />
+            <Route path="/specialmenu" element={<SpecialMenu />} />
+      </Routes>
       <Login />
-      <Design />
-      <Design2 />
-      <Design3 />
-      <Menu />
-      <SpecialMenu />
     </div>
   );
 }

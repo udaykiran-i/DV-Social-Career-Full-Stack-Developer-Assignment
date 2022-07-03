@@ -2,9 +2,13 @@ import * as React from 'react';
 import "./menu.css";
 import Grid from '@mui/material/Grid';
 import Cart from "../Cart/cart";
+// import ReactDOM from "react-dom";
+// import { BrowserRouter as Routes, Route } from "react-router-dom";
+
 
 function Menu() {
     return (
+        <div>
         <Grid spacing = {2}>
             <br />  <br />
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -108,7 +112,10 @@ function Menu() {
             </Grid>
             <br />  <br />
         </Grid>
+        </div>
     )
 }
+
+
 
 export default Menu;

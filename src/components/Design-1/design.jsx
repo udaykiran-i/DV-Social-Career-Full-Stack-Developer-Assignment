@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import "./design.css";
 
 export default function Design() {
+  const navigate = useNavigate()
   const card = (
     <React.Fragment>
       <CardContent>
@@ -17,7 +18,7 @@ export default function Design() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button onClick={() => console.log("Logged")} class="button-style0" variant="light">Click to view</Button>
+        <Button onClick={() => navigate('/menu')} class="button-style0" variant="light">Click to view</Button>
       </CardActions>
     </React.Fragment>
   );
